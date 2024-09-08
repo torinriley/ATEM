@@ -11,3 +11,7 @@
 
 ## Other High Priority
 - [ ] Organize into proper files.
+
+
+## Compleated
+- [ ] Added tasks class and scenario class, to ultimetly output a data package (object) with all nessecary information
