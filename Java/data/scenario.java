@@ -1,3 +1,4 @@
+package data;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -22,7 +23,10 @@ public class scenario {
         scenarios.add(this);
     }
 
-    public HashMap<scenario, HashMap<String, Object>> viewScenario(tasks taskInstance) {
+
+    //FIXME: fix Task.java class refernce in ViewScenario 
+    
+    public HashMap<scenario, HashMap<String, Object>> viewScenario(Task taskInstance) {
         HashMap<scenario, HashMap<String, Object>> scenarioDetails = new HashMap<>();
 
         for (scenario instance : scenarios) {

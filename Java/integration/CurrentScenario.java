@@ -1,3 +1,4 @@
+package integration;
 import java.util.HashMap;
 
 public class CurrentScenario {
