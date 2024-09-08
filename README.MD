@@ -1,4 +1,4 @@
-# About
+# About Adaptive Task Execution Model (ATEM)
 
 ATEM is an optimization machine learning model for the autonomous stage of the competition. ATEM is trained on packages of data called "scenarios". Each package contains key information about the environment, such as tasks completed, the difficulty of tasks, time left after each task, points scored on each task, success of each task, etc. The model then optimizes the list, or order, of tasks to maximize the number of points scored in the autonomous competition stage. After training, the model uses its training to produce the optimal lists of tasks in real time during the auto stage. Note that some of the references in this paper are specific to the 2024-2025 season.
 
