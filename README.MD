@@ -1,0 +1,13 @@
+# About
+
+ATEM is an optimization machine learning model for the autonomous stage of the competition. ATEM is trained on packages of data called "scenarios". Each package contains key information about the environment, such as tasks completed, the difficulty of tasks, time left after each task, points scored on each task, success of each task, etc. The model then optimizes the list, or order, of tasks to maximize the number of points scored in the autonomous competition stage. After training, the model uses its training to produce the optimal lists of tasks in real time during the auto stage. Note that some of the references in this paper are specific to the 2024-2025 season.
+
+
+# Real-Time Integration
+In real-time, ATEM loads a list of optimized tasks to complete (of course this list depends entirely on the quality of the training data) and then proceeds to execute the tasks. However, after each task is executed, the model will then input variables from the previous task completed: task length, was successful, points scored, opponent alliances points scored, time left, etc. The model considers them and then provides a list of tasks to complete considering the last task.
+Each task has a defined set of moves associated with it. Each task’s moves are concatenated in real time to form a master list of executable instructions. This list adapts after each task is completed. It's important to note that no real-time training is happening, the model's architecture allows for input, in the form of scenarios, and then outputs an optimized list; the model is already trained. The model does not train in real time but uses pre-trained logic and real-time data inputs to optimize task execution.
+
+
+# Implementation
+The executable implementation of the outlined model ATEM, is achieved by having team-specific training data. The core model provided in the source code can be used with a set of preprocessed training data formatted as scenarios. To ensure a highly accurate ATEM implementation, ensure you have simulated a diverse set of scenarios with variable factors, and ideally, an extensive set of data. 
+Once you have the model trained, the rest of the code, the  real_time_integration module, should work as expected in updating the model's task list (more generally speaking, the complete list of executable instructions). It's important to note that depending on the specific bot the model is being implemented for, the executable parameters should be updated accordingly with the moves the bot needs to execute (for example you need to update the specific references to your bot components, such as your intake system, lift systems, or drivetrain).
