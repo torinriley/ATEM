@@ -8,3 +8,6 @@
 - [ ] Add a script to include all moves for each task and be able to concatenate them together.
 - [ ] Dynamically concatenate tasks by implementing functionality to direct the bot to be able to execute tasks (logic for edge cases).
 - [ ] Add concatenation logic for the different moves for the different tasks, to have a real-time move execution list.
+
+## Other High Priority
+- [ ] Organize into proper files.
