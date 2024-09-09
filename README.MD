@@ -52,25 +52,30 @@ An example of the data structure:
 ```json
 [
     {
-        "scenarioNumber": 2,
-        "scenarioTag": "unique-scenario-id-2",
-        "totalPoints": 14,
-        "totalTimeSpent": 29,
+        "scenarioNumber": 1,
+        "scenarioTag": "3421707a-1e1b-49ed-aeab-0de4d2bbf5b1",
+        "totalPoints": 11,
+        "totalTimeSpent": 28,
         "tasksPerformed": [
             {
-                "task_name": "Navigate Obstacle",
+                "task_name": "Parked in Observation Zone",
                 "points": 3,
-                "time_required": 6
-            },
-            {
-                "task_name": "Score in Target Zone",
-                "points": 5,
-                "time_required": 9
+                "time_required": 5
             },
             {
                 "task_name": "Level 1 Ascent",
-                "points": 3,
+                "points": 2,
                 "time_required": 5
+            },
+            {
+                "task_name": "Sample in Net Zone",
+                "points": 2,
+                "time_required": 8
+            },
+            {
+                "task_name": "Sample in Low Basket",
+                "points": 4,
+                "time_required": 10
             }
         ]
     }
