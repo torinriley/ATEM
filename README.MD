@@ -52,30 +52,25 @@ An example of the data structure:
 ```json
 [
     {
-        "scenarioNumber": 1,
-        "scenarioTag": "cf6a9b0f-2dd7-438d-8de7-21ff9964102b",
-        "totalPoints": 11,
-        "totalTimeSpent": 28,
+        "scenarioNumber": 2,
+        "scenarioTag": "unique-scenario-id-2",
+        "totalPoints": 14,
+        "totalTimeSpent": 29,
         "tasksPerformed": [
             {
-                "task_name": "Parked in Observation Zone",
+                "task_name": "Navigate Obstacle",
                 "points": 3,
-                "time_required": 5
+                "time_required": 6
+            },
+            {
+                "task_name": "Score in Target Zone",
+                "points": 5,
+                "time_required": 9
             },
             {
                 "task_name": "Level 1 Ascent",
-                "points": 2,
+                "points": 3,
                 "time_required": 5
-            },
-            {
-                "task_name": "Sample in Net Zone",
-                "points": 2,
-                "time_required": 8
-            },
-            {
-                "task_name": "Sample in Low Basket",
-                "points": 4,
-                "time_required": 10
             }
         ]
     }
@@ -98,6 +93,18 @@ To train the model, run the trainMain.py file. This script will:
 ```bash
 python trainMain.py
 ```
+
+The model, on output, will give you a confimraiotn, and exmaple output, of its top scenarios, it will include key informaiton in those output scenairos such as 
+
+
+```
+Scenario 1 - Predicted Task Sequence: ['Sample in Net Zone', 'Deliver to High Basket', 'Sample in Low Basket', 'Parked in Observation Zone']
+Scenario 1 - Predicted Total Points: 16
+Scenario 1 - Predicted Total Time: 25 seconds
+```
+
+This is the sort of information that can be retreived from the model via the helper script in java, and then you can execute moves based on the outputted predictions.
+
 
 **Real Time Integration:**
 
