@@ -26,7 +26,7 @@ task_points = {
     "Specimen on High Chamber": 6,
 }
 
-#TODO: Ensure that these are accurtae times, requres testing
+#TODO: Ensure that these are accurate times, requires testing
 # Task times mapping
 task_times = {
     "Parked in Observation Zone": 5,
