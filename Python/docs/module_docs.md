@@ -28,4 +28,4 @@ Key Components:
 
 # main
 
-The `main` module, in conjunction with the `scenario_classes` module, work to allow you to enter the correct data, then dynamically format the data into a JSON file, one that can be accessed through the main machine learning model, streamlining the process for data processing, and ensuring reusability in classes, for potentially different applications.
+The `main` module, in conjunction with the `scenario_classes` module, work to allow you to enter the correct data, then dynamically format the data into a JSON file, one that can be accessed through the main machine learning model, streamlining the process for data processing, and ensuring reusability in classes, for potentially different applications. Note that `task_difficulty` is a subjective measurement, that is determiedn on a 1-5 scale. Teams are encouraged to develop a through and well defiend task diffuclty measuremnet. 

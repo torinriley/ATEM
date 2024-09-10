@@ -1,0 +1,35 @@
+[
+    {
+        "scenarioNumber": 1,
+        "scenarioTag": "e3956a08-3206-4b05-9a29-b6cec480d922",
+        "totalPoints": 11,
+        "totalTimeSpent": 28,
+        "totalTaskDifficulty": 17,
+        "tasksPerformed": [
+            {
+                "task_name": "Parked in Observation Zone",
+                "points": 3,
+                "time_required": 5,
+                "task_difficulty": 5
+            },
+            {
+                "task_name": "Level 1 Ascent",
+                "points": 2,
+                "time_required": 5,
+                "task_difficulty": 5
+            },
+            {
+                "task_name": "Sample in Net Zone",
+                "points": 2,
+                "time_required": 8,
+                "task_difficulty": 4
+            },
+            {
+                "task_name": "Sample in Low Basket",
+                "points": 4,
+                "time_required": 10,
+                "task_difficulty": 3
+            }
+        ]
+    }
+]
