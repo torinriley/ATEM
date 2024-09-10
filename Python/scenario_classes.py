@@ -1,16 +1,18 @@
-import uuid 
+import uuid
 
 class Task:
-    def __init__(self, task_name, points, time_required):
+    def __init__(self, task_name, points, time_required, task_difficulty):
         """
         Task represents an individual task in a scenario.
         :param task_name: Name of the task
         :param points: Points the task is worth
         :param time_required: Time required to complete the task
+        :param task_difficulty: Difficulty of the task
         """
         self.task_name = task_name
         self.points = points
         self.time_required = time_required
+        self.task_difficulty = task_difficulty
 
 
 class Scenario:
@@ -22,9 +24,10 @@ class Scenario:
         """
         self.scenario_tag = str(uuid.uuid4())
         self.task_type = task_type
-        self.tasks = [] 
+        self.tasks = []
         self.total_points = 0
         self.total_time_spent = 0
+        self.total_task_difficulty = 0
 
     def add_task(self, task):
         """
@@ -34,6 +37,7 @@ class Scenario:
         self.tasks.append(task)
         self.total_points += task.points
         self.total_time_spent += task.time_required
+        self.total_task_difficulty += task.task_difficulty
 
     def remove_task(self, task_name):
         """
@@ -44,6 +48,7 @@ class Scenario:
             if task.task_name == task_name:
                 self.total_points -= task.points
                 self.total_time_spent -= task.time_required
+                self.total_task_difficulty -= task.task_difficulty
                 self.tasks.remove(task)
                 break
 
@@ -52,7 +57,7 @@ class Scenario:
         Get a summary of all tasks in the scenario.
         :return: A list of dictionaries representing each task
         """
-        return [{"task_name": task.task_name, "points": task.points, "time_required": task.time_required} for task in self.tasks]
+        return [{"task_name": task.task_name, "points": task.points, "time_required": task.time_required, "task_difficulty": task.task_difficulty} for task in self.tasks]
 
     def get_scenario_summary(self):
         """
@@ -64,6 +69,7 @@ class Scenario:
             "scenarioTag": self.scenario_tag,
             "totalPoints": self.total_points,
             "totalTimeSpent": self.total_time_spent,
+            "totalTaskDifficulty": self.total_task_difficulty,
             "tasks": self.get_tasks()
         }
 
